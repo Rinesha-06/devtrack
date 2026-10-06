@@ -1,0 +1,57 @@
+[
+  {
+    "id": "story_01",
+    "projectId": "proj_devtrack_01",
+    "sprintId": "sprint_01",
+    "title": "User Authentication & RBAC",
+    "description": "As a user, I want to securely log in and access role-specific functionality.",
+    "acceptanceCriteria": "Support Project Manager, Developer, and Tester roles with JWT token.",
+    "priority": "CRITICAL",
+    "storyPoints": 5,
+    "status": "COMPLETED",
+    "assignedTo": "user_dev_01",
+    "createdAt": "2026-09-17T20:14:21.777Z",
+    "updatedAt": "2026-10-06T20:14:21.777Z"
+  },
+  {
+    "id": "story_02",
+    "projectId": "proj_devtrack_01",
+    "sprintId": "sprint_02",
+    "title": "Interactive Kanban Board",
+    "description": "As a team member, I want to track and drag tasks through workflow columns.",
+    "acceptanceCriteria": "Support To Do, In Progress, Review, Testing, Completed states with live sync.",
+    "priority": "HIGH",
+    "storyPoints": 8,
+    "status": "IN PROGRESS",
+    "assignedTo": "user_dev_01",
+    "createdAt": "2026-10-02T20:14:21.777Z",
+    "updatedAt": "2026-10-06T20:14:21.783Z"
+  },
+  {
+    "id": "story_03",
+    "projectId": "proj_devtrack_01",
+    "sprintId": "sprint_02",
+    "title": "Real-time Project Analytics",
+    "description": "As a Project Manager, I want centralized dashboards with Recharts data visualizations.",
+    "acceptanceCriteria": "Display task breakdown, bug severity, sprint velocity, and resolution rate.",
+    "priority": "HIGH",
+    "storyPoints": 5,
+    "status": "IN PROGRESS",
+    "assignedTo": "user_dev_01",
+    "createdAt": "2026-10-02T20:14:21.777Z",
+    "updatedAt": "2026-10-06T20:14:21.784Z"
+  },
+  {
+    "id": "story_1791317663816_3927ft",
+    "projectId": "proj_1791317663624_n35f5y",
+    "sprintId": "sprint_1791317663779_a2vw5y",
+    "title": "As an M.Tech student, I want to deploy to Cloud Run",
+    "description": "Ensure scale-to-zero microservice architecture",
+    "acceptanceCriteria": "",
+    "priority": "HIGH",
+    "storyPoints": 5,
+    "status": "TO DO",
+    "createdAt": "2026-10-06T20:14:23.816Z",
+    "updatedAt": "2026-10-06T20:14:23.816Z"
+  }
+]

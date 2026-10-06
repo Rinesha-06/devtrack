@@ -1,0 +1,46 @@
+[
+  {
+    "id": "sprint_01",
+    "projectId": "proj_devtrack_01",
+    "name": "Sprint 1 — Core Auth & Architecture",
+    "goal": "Establish Cloud Run base container, Firestore collections, and JWT Authentication.",
+    "startDate": "2026-09-16",
+    "endDate": "2026-09-30",
+    "status": "Completed",
+    "createdAt": "2026-09-16T20:14:21.770Z",
+    "updatedAt": "2026-10-06T20:14:21.770Z"
+  },
+  {
+    "id": "sprint_02",
+    "projectId": "proj_devtrack_01",
+    "name": "Sprint 2 — Project & Backlog Management",
+    "goal": "Deliver user story backlog, task status progression, and Kanban board.",
+    "startDate": "2026-10-01",
+    "endDate": "2026-10-15",
+    "status": "Active",
+    "createdAt": "2026-10-01T20:14:21.770Z",
+    "updatedAt": "2026-10-06T20:14:21.774Z"
+  },
+  {
+    "id": "sprint_03",
+    "projectId": "proj_devtrack_01",
+    "name": "Sprint 3 — Bug Tracking & DevOps CI/CD",
+    "goal": "Implement bug triage workflow, GitHub telemetry, and Cloud Build pipeline.",
+    "startDate": "2026-10-16",
+    "endDate": "2026-10-30",
+    "status": "Planned",
+    "createdAt": "2026-10-06T20:14:21.770Z",
+    "updatedAt": "2026-10-06T20:14:21.776Z"
+  },
+  {
+    "id": "sprint_1791317663779_a2vw5y",
+    "projectId": "proj_1791317663624_n35f5y",
+    "name": "Sprint Alpha",
+    "goal": "Demonstrate end-to-end Agile lifecycle",
+    "startDate": "2026-10-06",
+    "endDate": "2026-10-20",
+    "status": "Active",
+    "createdAt": "2026-10-06T20:14:23.779Z",
+    "updatedAt": "2026-10-06T20:14:23.780Z"
+  }
+]

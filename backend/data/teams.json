@@ -1,0 +1,27 @@
+[
+  {
+    "id": "team_core_01",
+    "name": "DevTrack Engineering Core",
+    "description": "Cross-functional engineering pod responsible for Cloud Run microservices & frontend UI",
+    "createdBy": "user_pm_01",
+    "members": [
+      {
+        "userId": "user_pm_01",
+        "role": "PROJECT_MANAGER",
+        "addedAt": "2026-10-06T20:14:21.763Z"
+      },
+      {
+        "userId": "user_dev_01",
+        "role": "DEVELOPER",
+        "addedAt": "2026-10-06T20:14:21.763Z"
+      },
+      {
+        "userId": "user_qa_01",
+        "role": "TESTER",
+        "addedAt": "2026-10-06T20:14:21.763Z"
+      }
+    ],
+    "createdAt": "2026-09-11T20:14:21.763Z",
+    "updatedAt": "2026-10-06T20:14:21.763Z"
+  }
+]

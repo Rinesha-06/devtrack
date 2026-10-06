@@ -1,0 +1,58 @@
+[
+  {
+    "id": "proj_devtrack_01",
+    "name": "DevTrack Platform",
+    "description": "Cloud-native integrated software project management system deployed on Google Cloud Run with Firestore database.",
+    "startDate": "2026-09-16",
+    "endDate": "2026-11-15",
+    "status": "Active",
+    "priority": "HIGH",
+    "managerId": "user_pm_01",
+    "teamId": "team_core_01",
+    "repositoryUrl": "https://github.com/google/devtrack-demo",
+    "progress": 68,
+    "members": [
+      "user_pm_01",
+      "user_dev_01",
+      "user_qa_01"
+    ],
+    "createdAt": "2026-09-16T20:14:21.766Z",
+    "updatedAt": "2026-10-06T20:14:21.766Z"
+  },
+  {
+    "id": "proj_ecommerce_02",
+    "name": "E-Commerce Cloud Store",
+    "description": "Scalable multi-tenant retail storefront with microservices and real-time checkout.",
+    "startDate": "2026-09-26",
+    "endDate": "2026-12-05",
+    "status": "Active",
+    "priority": "MEDIUM",
+    "managerId": "user_pm_01",
+    "teamId": "team_core_01",
+    "repositoryUrl": "https://github.com/google/ecommerce-demo",
+    "progress": 35,
+    "members": [
+      "user_pm_01",
+      "user_dev_01"
+    ],
+    "createdAt": "2026-09-26T20:14:21.766Z",
+    "updatedAt": "2026-10-06T20:14:21.769Z"
+  },
+  {
+    "id": "proj_1791317663624_n35f5y",
+    "name": "Academic Cloud Run Suite",
+    "description": "Testing RBAC enforcement on Cloud Run architecture",
+    "startDate": "2026-10-06",
+    "endDate": "2026-11-05",
+    "status": "Active",
+    "priority": "HIGH",
+    "managerId": "user_pm_01",
+    "repositoryUrl": "",
+    "progress": 100,
+    "members": [
+      "user_pm_01"
+    ],
+    "createdAt": "2026-10-06T20:14:23.624Z",
+    "updatedAt": "2026-10-06T20:14:23.980Z"
+  }
+]

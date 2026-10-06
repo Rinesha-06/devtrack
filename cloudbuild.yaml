@@ -1,0 +1,90 @@
+# ============================================================
+# DevTrack Automated CI/CD Pipeline (Google Cloud Build)
+# Enforces: Testing -> Quality Gate -> Container Build -> Artifact Registry -> Cloud Run
+# ============================================================
+
+substitutions:
+  _REGION: 'asia-south1'
+  _REPO_NAME: 'devtrack-repo'
+  _SERVICE_NAME: 'devtrack-app'
+
+steps:
+  # Step 1: Install backend dependencies
+  - name: 'node:22-alpine'
+    id: 'backend-install'
+    entrypoint: 'npm'
+    args: ['ci']
+    dir: 'backend'
+
+  # Step 2: Quality Gate - Run Automated Backend & API Tests
+  # (Pipeline terminates immediately if any test fails)
+  - name: 'node:22-alpine'
+    id: 'backend-tests'
+    entrypoint: 'npm'
+    args: ['test']
+    dir: 'backend'
+    env:
+      - 'NODE_ENV=test'
+      - 'USE_LOCAL_DB=true'
+      - 'JWT_SECRET=ci-build-test-secret'
+
+  # Step 3: Install frontend dependencies
+  - name: 'node:22-alpine'
+    id: 'frontend-install'
+    entrypoint: 'npm'
+    args: ['ci']
+    dir: 'frontend'
+
+  # Step 4: Build React Frontend Production Bundle
+  - name: 'node:22-alpine'
+    id: 'frontend-build'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+    dir: 'frontend'
+
+  # Step 5: Build Multi-Stage Production Container Image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'docker-build'
+    args:
+      - 'build'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}:${SHORT_SHA}'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}:latest'
+      - '.'
+
+  # Step 6: Push Container Image to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'docker-push'
+    args:
+      - 'push'
+      - '--all-tags'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}'
+
+  # Step 7: Deploy to Google Cloud Run (Cost-Optimized Scale-to-Zero)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'cloud-run-deploy'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - '${_SERVICE_NAME}'
+      - '--image=${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}:${SHORT_SHA}'
+      - '--region=${_REGION}'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+      - '--min-instances=0'
+      - '--max-instances=2'
+      - '--memory=512Mi'
+      - '--cpu=1'
+      - '--set-env-vars=NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID}'
+
+images:
+  - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}:${SHORT_SHA}'
+  - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/${_SERVICE_NAME}:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: 'E2_MEDIUM'
+
+timeout: '900s'

@@ -1,0 +1,38 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: devtrack-app
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/launch-stage: GA
+spec:
+  template:
+    metadata:
+      annotations:
+        # Scale-to-Zero Optimization (Hard Requirement for Academic Free Tier)
+        autoscaling.knative.dev/minScale: '0'
+        autoscaling.knative.dev/maxScale: '2'
+        run.googleapis.com/cpu-throttling: 'true'
+        run.googleapis.com/startup-cpu-boost: 'true'
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: devtrack-sa@project-b2ff78e3-650d-4af6-9bb.iam.gserviceaccount.com
+      containers:
+        - image: asia-south1-docker.pkg.dev/project-b2ff78e3-650d-4af6-9bb/devtrack-repo/devtrack-app:latest
+          ports:
+            - name: http1
+              containerPort: 8080
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: '8080'
+            - name: GCP_PROJECT_ID
+              value: project-b2ff78e3-650d-4af6-9bb
+            - name: FIRESTORE_DATABASE_ID
+              value: '(default)'

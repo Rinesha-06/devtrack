@@ -1,0 +1,156 @@
+[
+  {
+    "id": "act_01",
+    "projectId": "proj_devtrack_01",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "PROJECT_CREATED",
+    "details": "Created project \"DevTrack Platform\"",
+    "timestamp": "2026-09-16T20:14:21.798Z",
+    "createdAt": "2026-10-06T20:14:21.798Z",
+    "updatedAt": "2026-10-06T20:14:21.798Z"
+  },
+  {
+    "id": "act_02",
+    "projectId": "proj_devtrack_01",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "SPRINT_CREATED",
+    "details": "Created Sprint 2 — Project & Backlog Management",
+    "timestamp": "2026-10-01T20:14:21.798Z",
+    "createdAt": "2026-10-06T20:14:21.801Z",
+    "updatedAt": "2026-10-06T20:14:21.801Z"
+  },
+  {
+    "id": "act_03",
+    "projectId": "proj_devtrack_01",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Moved \"Build Kanban Board Drag-and-Drop Columns\" to IN PROGRESS",
+    "timestamp": "2026-10-04T20:14:21.798Z",
+    "createdAt": "2026-10-06T20:14:21.802Z",
+    "updatedAt": "2026-10-06T20:14:21.802Z"
+  },
+  {
+    "id": "act_04",
+    "projectId": "proj_devtrack_01",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_REPORTED",
+    "details": "Reported BUG \"Dashboard chart tooltip clipping on mobile screen\"",
+    "timestamp": "2026-10-05T20:14:21.798Z",
+    "createdAt": "2026-10-06T20:14:21.803Z",
+    "updatedAt": "2026-10-06T20:14:21.803Z"
+  },
+  {
+    "id": "act_05",
+    "projectId": "proj_devtrack_01",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Marked bug \"Login validation error\" as FIXED",
+    "timestamp": "2026-10-06T08:14:21.798Z",
+    "createdAt": "2026-10-06T20:14:21.804Z",
+    "updatedAt": "2026-10-06T20:14:21.804Z"
+  },
+  {
+    "id": "act_1791317663625_hjy4pk",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "PROJECT_CREATED",
+    "details": "Project \"Academic Cloud Run Suite\" was created by Sarah Chen",
+    "timestamp": "2026-10-06T20:14:23.625Z",
+    "createdAt": "2026-10-06T20:14:23.625Z",
+    "updatedAt": "2026-10-06T20:14:23.625Z"
+  },
+  {
+    "id": "act_1791317663781_y8pmuh",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "SPRINT_CREATED",
+    "details": "Sprint \"Sprint Alpha\" created for project by Sarah Chen",
+    "timestamp": "2026-10-06T20:14:23.781Z",
+    "createdAt": "2026-10-06T20:14:23.781Z",
+    "updatedAt": "2026-10-06T20:14:23.781Z"
+  },
+  {
+    "id": "act_1791317663817_xq0u6j",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "STORY_CREATED",
+    "details": "User story \"As an M.Tech student, I want to deploy to Cloud Run\" added to backlog",
+    "timestamp": "2026-10-06T20:14:23.817Z",
+    "createdAt": "2026-10-06T20:14:23.817Z",
+    "updatedAt": "2026-10-06T20:14:23.817Z"
+  },
+  {
+    "id": "act_1791317663896_8x9dcb",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TASK_CREATED",
+    "details": "Task \"Configure Cloud Run Container\" created by Sarah Chen",
+    "timestamp": "2026-10-06T20:14:23.896Z",
+    "createdAt": "2026-10-06T20:14:23.896Z",
+    "updatedAt": "2026-10-06T20:14:23.896Z"
+  },
+  {
+    "id": "act_1791317663942_y3xwlt",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to IN PROGRESS",
+    "timestamp": "2026-10-06T20:14:23.942Z",
+    "createdAt": "2026-10-06T20:14:23.942Z",
+    "updatedAt": "2026-10-06T20:14:23.942Z"
+  },
+  {
+    "id": "act_1791317663978_ca2pev",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to COMPLETED",
+    "timestamp": "2026-10-06T20:14:23.978Z",
+    "createdAt": "2026-10-06T20:14:23.978Z",
+    "updatedAt": "2026-10-06T20:14:23.978Z"
+  },
+  {
+    "id": "act_1791317664030_l6tdeg",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_REPORTED",
+    "details": "Priya Sharma reported bug \"Memory limit exceeded on high load\" (HIGH)",
+    "timestamp": "2026-10-06T20:14:24.030Z",
+    "createdAt": "2026-10-06T20:14:24.030Z",
+    "updatedAt": "2026-10-06T20:14:24.030Z"
+  },
+  {
+    "id": "act_1791317664101_4v36v4",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Alex Rivera transitioned \"Memory limit exceeded on high load\" to FIXED (Resolution: Configured Cloud Run min-instances to 0 and increased memory to 512MB)",
+    "timestamp": "2026-10-06T20:14:24.101Z",
+    "createdAt": "2026-10-06T20:14:24.101Z",
+    "updatedAt": "2026-10-06T20:14:24.101Z"
+  },
+  {
+    "id": "act_1791317664134_4uq5x5",
+    "projectId": "proj_1791317663624_n35f5y",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Priya Sharma transitioned \"Memory limit exceeded on high load\" to CLOSED",
+    "timestamp": "2026-10-06T20:14:24.134Z",
+    "createdAt": "2026-10-06T20:14:24.134Z",
+    "updatedAt": "2026-10-06T20:14:24.134Z"
+  }
+]

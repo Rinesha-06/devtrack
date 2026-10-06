@@ -1,0 +1,35 @@
+{
+  "serviceAccount": {
+    "name": "devtrack-sa",
+    "displayName": "DevTrack Cloud Run Service Identity",
+    "description": "Least-privilege service account used by DevTrack container on Cloud Run"
+  },
+  "requiredRoles": [
+    {
+      "role": "roles/datastore.user",
+      "description": "Provides read and write access to Cloud Firestore documents and collections"
+    },
+    {
+      "role": "roles/logging.logWriter",
+      "description": "Enables writing application structured logs to Cloud Logging"
+    },
+    {
+      "role": "roles/monitoring.metricWriter",
+      "description": "Enables emitting runtime latency and container metrics to Cloud Monitoring"
+    }
+  ],
+  "cloudBuildRoles": [
+    {
+      "role": "roles/run.admin",
+      "description": "Allows Cloud Build service account to deploy new revisions to Cloud Run"
+    },
+    {
+      "role": "roles/iam.serviceAccountUser",
+      "description": "Allows Cloud Build to act as the Cloud Run service identity"
+    },
+    {
+      "role": "roles/artifactregistry.writer",
+      "description": "Allows pushing container images to Google Artifact Registry"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "build_cb_104",
+    "buildNumber": 104,
+    "commit": "a1b2c3d",
+    "branch": "main",
+    "status": "SUCCESS",
+    "durationSeconds": 142,
+    "timestamp": "2026-10-06T19:39:24.678Z",
+    "logUrl": "https://console.cloud.google.com/cloud-build/builds/build_cb_104",
+    "createdAt": "2026-10-06T20:14:24.678Z",
+    "updatedAt": "2026-10-06T20:14:24.678Z"
+  },
+  {
+    "id": "build_cb_103",
+    "buildNumber": 103,
+    "commit": "9f8e7d6",
+    "branch": "main",
+    "status": "SUCCESS",
+    "durationSeconds": 156,
+    "timestamp": "2026-10-06T15:14:24.678Z",
+    "logUrl": "https://console.cloud.google.com/cloud-build/builds/build_cb_103",
+    "createdAt": "2026-10-06T20:14:24.679Z",
+    "updatedAt": "2026-10-06T20:14:24.679Z"
+  },
+  {
+    "id": "build_cb_102",
+    "buildNumber": 102,
+    "commit": "e2d1c0b",
+    "branch": "feature/auth",
+    "status": "FAILURE",
+    "durationSeconds": 78,
+    "timestamp": "2026-10-05T20:14:24.678Z",
+    "logUrl": "https://console.cloud.google.com/cloud-build/builds/build_cb_102",
+    "createdAt": "2026-10-06T20:14:24.680Z",
+    "updatedAt": "2026-10-06T20:14:24.680Z"
+  }
+]
