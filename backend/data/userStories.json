@@ -10,8 +10,8 @@
     "storyPoints": 5,
     "status": "COMPLETED",
     "assignedTo": "user_dev_01",
-    "createdAt": "2026-09-18T07:05:49.716Z",
-    "updatedAt": "2026-10-07T07:05:49.716Z"
+    "createdAt": "2026-09-18T13:34:58.757Z",
+    "updatedAt": "2026-10-07T13:34:58.757Z"
   },
   {
     "id": "story_02",
@@ -24,8 +24,8 @@
     "storyPoints": 8,
     "status": "IN PROGRESS",
     "assignedTo": "user_dev_01",
-    "createdAt": "2026-10-03T07:05:49.716Z",
-    "updatedAt": "2026-10-07T07:05:49.718Z"
+    "createdAt": "2026-10-03T13:34:58.757Z",
+    "updatedAt": "2026-10-07T13:34:58.761Z"
   },
   {
     "id": "story_03",
@@ -38,8 +38,8 @@
     "storyPoints": 5,
     "status": "IN PROGRESS",
     "assignedTo": "user_dev_01",
-    "createdAt": "2026-10-03T07:05:49.716Z",
-    "updatedAt": "2026-10-07T07:05:49.719Z"
+    "createdAt": "2026-10-03T13:34:58.757Z",
+    "updatedAt": "2026-10-07T13:34:58.762Z"
   },
   {
     "id": "story_1791317663816_3927ft",
@@ -79,5 +79,18 @@
     "status": "TO DO",
     "createdAt": "2026-10-07T07:05:52.120Z",
     "updatedAt": "2026-10-07T07:05:52.120Z"
+  },
+  {
+    "id": "story_1791380100912_fbzqnn",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "sprintId": "sprint_1791380100853_8q2mv5",
+    "title": "As an M.Tech student, I want to deploy to Cloud Run",
+    "description": "Ensure scale-to-zero microservice architecture",
+    "acceptanceCriteria": "",
+    "priority": "HIGH",
+    "storyPoints": 5,
+    "status": "TO DO",
+    "createdAt": "2026-10-07T13:35:00.912Z",
+    "updatedAt": "2026-10-07T13:35:00.912Z"
   }
 ]

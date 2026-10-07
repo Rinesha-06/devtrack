@@ -5,13 +5,14 @@ import {
 } from 'lucide-react';
 import { api } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
-import { UserStory, Project, Sprint, PriorityLevel } from '../types';
+import { UserStory, Project, Sprint, PriorityLevel, User } from '../types';
 
 export const Backlog: React.FC = () => {
   const { isProjectManager } = useAuth();
   const [stories, setStories] = useState<UserStory[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [sprints, setSprints] = useState<Sprint[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
@@ -21,6 +22,7 @@ export const Backlog: React.FC = () => {
   const [acceptanceCriteria, setAcceptanceCriteria] = useState('');
   const [projectId, setProjectId] = useState('');
   const [sprintId, setSprintId] = useState('');
+  const [assignedTo, setAssignedTo] = useState('');
   const [storyPoints, setStoryPoints] = useState(3);
   const [priority, setPriority] = useState<PriorityLevel>('MEDIUM');
   const [formError, setFormError] = useState<string | null>(null);
@@ -32,13 +34,15 @@ export const Backlog: React.FC = () => {
   const loadData = async () => {
     setLoading(true);
     try {
-      const [storiesRes, projRes, sprintsRes] = await Promise.all([
+      const [storiesRes, projRes, sprintsRes, usersRes] = await Promise.all([
         api.stories.list(),
         api.projects.list(),
-        api.sprints.list()
+        api.sprints.list(),
+        api.auth.getUsers()
       ]);
 
       if (storiesRes.data.success) setStories(storiesRes.data.stories);
+      if (usersRes.data.success) setUsers(usersRes.data.users);
       if (projRes.data.success) {
         setProjects(projRes.data.projects);
         if (!projectId && projRes.data.projects.length > 0) {
@@ -60,6 +64,7 @@ export const Backlog: React.FC = () => {
       const res = await api.stories.create({
         projectId,
         sprintId: sprintId || undefined,
+        assignedTo: assignedTo || undefined,
         title,
         description,
         acceptanceCriteria,
@@ -72,6 +77,7 @@ export const Backlog: React.FC = () => {
         setTitle('');
         setDescription('');
         setAcceptanceCriteria('');
+        setAssignedTo('');
         loadData();
       }
     } catch (err: any) {
@@ -277,6 +283,24 @@ export const Backlog: React.FC = () => {
                     ))}
                   </select>
                 </div>
+              </div>
+
+              <div>
+                <label className="block font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  Assignee (Team Member)
+                </label>
+                <select
+                  value={assignedTo}
+                  onChange={e => setAssignedTo(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:ring-2 focus:ring-teal-500 outline-none"
+                >
+                  <option value="">Unassigned</option>
+                  {users.map(u => (
+                    <option key={u.id} value={u.id}>
+                      {u.name} ({u.email}) — [{u.role}]
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="flex justify-end gap-2 pt-3 border-t border-slate-100">

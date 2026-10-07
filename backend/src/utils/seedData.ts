@@ -46,20 +46,39 @@ export async function seedDemoData() {
   }
 
   // 2. Teams
-  const team: Team = {
-    id: 'team_core_01',
-    name: 'DevTrack Engineering Core',
-    description: 'Cross-functional engineering pod responsible for Cloud Run microservices & frontend UI',
-    createdBy: 'user_pm_01',
-    members: [
-      { userId: 'user_pm_01', role: 'PROJECT_MANAGER', addedAt: new Date().toISOString() },
-      { userId: 'user_dev_01', role: 'DEVELOPER', addedAt: new Date().toISOString() },
-      { userId: 'user_qa_01', role: 'TESTER', addedAt: new Date().toISOString() }
-    ],
-    createdAt: new Date(Date.now() - 25 * 86400000).toISOString(),
-    updatedAt: new Date().toISOString()
-  };
-  await db.create('teams', team);
+  const teams: Team[] = [
+    {
+      id: 'team_core_01',
+      name: 'DevTrack Engineering Core',
+      description: 'Cross-functional engineering pod responsible for Cloud Run microservices & frontend UI',
+      projectId: 'proj_devtrack_01',
+      createdBy: 'user_pm_01',
+      members: [
+        { userId: 'user_pm_01', name: 'Sarah Chen', email: 'pm@devtrack.io', role: 'PROJECT_MANAGER', addedAt: new Date().toISOString() },
+        { userId: 'user_dev_01', name: 'Alex Rivera', email: 'dev@devtrack.io', role: 'DEVELOPER', addedAt: new Date().toISOString() },
+        { userId: 'user_qa_01', name: 'Priya Sharma', email: 'tester@devtrack.io', role: 'TESTER', addedAt: new Date().toISOString() }
+      ],
+      createdAt: new Date(Date.now() - 25 * 86400000).toISOString(),
+      updatedAt: new Date().toISOString()
+    },
+    {
+      id: 'team_cloud_02',
+      name: 'Cloud Infrastructure & DevOps Pod',
+      description: 'Specialized pod for CI/CD pipelines, container deployments, and monitoring',
+      projectId: 'proj_ecommerce_02',
+      createdBy: 'user_pm_01',
+      members: [
+        { userId: 'user_pm_01', name: 'Sarah Chen', email: 'pm@devtrack.io', role: 'PROJECT_MANAGER', addedAt: new Date().toISOString() },
+        { userId: 'user_dev_01', name: 'Alex Rivera', email: 'dev@devtrack.io', role: 'DEVELOPER', addedAt: new Date().toISOString() }
+      ],
+      createdAt: new Date(Date.now() - 15 * 86400000).toISOString(),
+      updatedAt: new Date().toISOString()
+    }
+  ];
+
+  for (const t of teams) {
+    await db.create('teams', t);
+  }
 
   // 3. Projects
   const projects: Project[] = [

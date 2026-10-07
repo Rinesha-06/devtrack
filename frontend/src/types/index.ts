@@ -106,6 +106,8 @@ export interface Bug {
 
 export interface TeamMember {
   userId: string;
+  name?: string;
+  email?: string;
   role: UserRole;
   addedAt: string;
 }
@@ -114,9 +116,11 @@ export interface Team {
   id: string;
   name: string;
   description: string;
+  projectId?: string;
   createdBy: string;
   members: TeamMember[];
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface Activity {

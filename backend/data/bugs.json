@@ -15,8 +15,8 @@
     "expectedResult": "Successful authentication token return",
     "actualResult": "401 Unauthorized",
     "resolution": "Fixed string encoding in body parser and bcrypt compare payload.",
-    "createdAt": "2026-10-02T07:05:49.728Z",
-    "updatedAt": "2026-10-07T07:05:49.729Z"
+    "createdAt": "2026-10-02T13:34:58.772Z",
+    "updatedAt": "2026-10-07T13:34:58.772Z"
   },
   {
     "id": "bug_02",
@@ -33,8 +33,8 @@
     "stepsToReproduce": "Open Dashboard on screen width 390px, tap pie chart wedge.",
     "expectedResult": "Tooltip renders within viewport boundaries",
     "actualResult": "Horizontal scroll triggered",
-    "createdAt": "2026-10-05T07:05:49.729Z",
-    "updatedAt": "2026-10-07T07:05:49.731Z"
+    "createdAt": "2026-10-05T13:34:58.772Z",
+    "updatedAt": "2026-10-07T13:34:58.778Z"
   },
   {
     "id": "bug_03",
@@ -52,8 +52,8 @@
     "expectedResult": "Display 0% progress",
     "actualResult": "Displayed NaN%",
     "resolution": "Added ternary check fallback to 0 when totalTasks === 0.",
-    "createdAt": "2026-09-29T07:05:49.729Z",
-    "updatedAt": "2026-10-07T07:05:49.732Z"
+    "createdAt": "2026-09-29T13:34:58.772Z",
+    "updatedAt": "2026-10-07T13:34:58.780Z"
   },
   {
     "id": "bug_1791317664028_45bkt8",
@@ -107,6 +107,24 @@
     "actualResult": "",
     "createdAt": "2026-10-07T07:05:52.563Z",
     "updatedAt": "2026-10-07T07:05:52.663Z",
+    "resolution": "Configured Cloud Run min-instances to 0 and increased memory to 512MB"
+  },
+  {
+    "id": "bug_1791380101171_fdhj4j",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "taskId": "task_1791380100999_qrmo6o",
+    "title": "Memory limit exceeded on high load",
+    "description": "Scale-to-zero instance cold-start delay",
+    "reportedBy": "user_qa_01",
+    "severity": "HIGH",
+    "priority": "HIGH",
+    "status": "CLOSED",
+    "environment": "Google Cloud Run",
+    "stepsToReproduce": "",
+    "expectedResult": "",
+    "actualResult": "",
+    "createdAt": "2026-10-07T13:35:01.171Z",
+    "updatedAt": "2026-10-07T13:35:01.303Z",
     "resolution": "Configured Cloud Run min-instances to 0 and increased memory to 512MB"
   }
 ]

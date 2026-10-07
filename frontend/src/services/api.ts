@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  User, Project, Team, Sprint, UserStory, Task, Bug,
+  User, Project, Team, TeamMember, Sprint, UserStory, Task, Bug,
   Activity, Notification, RepositoryDetails, BuildRecord, DashboardStats
 } from '../types';
 
@@ -56,13 +56,17 @@ export const api = {
     addMember: (id: string, userId: string) => client.post(`/projects/${id}/members`, { userId })
   },
   teams: {
-    list: () => client.get<{ success: boolean; teams: Team[] }>('/teams'),
+    list: (projectId?: string) => client.get<{ success: boolean; teams: Team[] }>('/teams', { params: { projectId } }),
     getById: (id: string) => client.get<{ success: boolean; team: Team }>(`/teams/${id}`),
     create: (data: Partial<Team>) => client.post<{ success: boolean; team: Team }>('/teams', data),
     update: (id: string, data: Partial<Team>) => client.put<{ success: boolean; team: Team }>(`/teams/${id}`, data),
-    delete: (id: string) => client.delete(`/teams/${id}`),
-    addMember: (id: string, userId: string, role: string) => client.post(`/teams/${id}/members`, { userId, role }),
-    removeMember: (id: string, userId: string) => client.delete(`/teams/${id}/members/${userId}`)
+    delete: (id: string) => client.delete<{ success: boolean; message: string }>(`/teams/${id}`),
+    addMember: (id: string, data: { userId?: string; name?: string; email?: string; role: string }) =>
+      client.post<{ success: boolean; team: Team; member: TeamMember; user?: User }>(`/teams/${id}/members`, data),
+    updateMember: (id: string, userId: string, data: { name?: string; email?: string; role: string }) =>
+      client.put<{ success: boolean; team: Team; member: TeamMember }>(`/teams/${id}/members/${userId}`, data),
+    removeMember: (id: string, userId: string) =>
+      client.delete<{ success: boolean; team: Team; message: string }>(`/teams/${id}/members/${userId}`)
   },
   sprints: {
     list: (projectId?: string) => client.get<{ success: boolean; sprints: Sprint[] }>('/sprints', { params: { projectId } }),

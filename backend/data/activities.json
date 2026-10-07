@@ -6,9 +6,9 @@
     "userName": "Sarah Chen",
     "action": "PROJECT_CREATED",
     "details": "Created project \"DevTrack Platform\"",
-    "timestamp": "2026-09-17T07:05:49.734Z",
-    "createdAt": "2026-10-07T07:05:49.734Z",
-    "updatedAt": "2026-10-07T07:05:49.734Z"
+    "timestamp": "2026-09-17T13:34:58.781Z",
+    "createdAt": "2026-10-07T13:34:58.781Z",
+    "updatedAt": "2026-10-07T13:34:58.781Z"
   },
   {
     "id": "act_02",
@@ -17,9 +17,9 @@
     "userName": "Sarah Chen",
     "action": "SPRINT_CREATED",
     "details": "Created Sprint 2 — Project & Backlog Management",
-    "timestamp": "2026-10-02T07:05:49.734Z",
-    "createdAt": "2026-10-07T07:05:49.737Z",
-    "updatedAt": "2026-10-07T07:05:49.737Z"
+    "timestamp": "2026-10-02T13:34:58.781Z",
+    "createdAt": "2026-10-07T13:34:58.790Z",
+    "updatedAt": "2026-10-07T13:34:58.790Z"
   },
   {
     "id": "act_03",
@@ -28,9 +28,9 @@
     "userName": "Alex Rivera",
     "action": "TASK_STATUS_CHANGED",
     "details": "Moved \"Build Kanban Board Drag-and-Drop Columns\" to IN PROGRESS",
-    "timestamp": "2026-10-05T07:05:49.734Z",
-    "createdAt": "2026-10-07T07:05:49.739Z",
-    "updatedAt": "2026-10-07T07:05:49.739Z"
+    "timestamp": "2026-10-05T13:34:58.781Z",
+    "createdAt": "2026-10-07T13:34:58.796Z",
+    "updatedAt": "2026-10-07T13:34:58.796Z"
   },
   {
     "id": "act_04",
@@ -39,9 +39,9 @@
     "userName": "Priya Sharma",
     "action": "BUG_REPORTED",
     "details": "Reported BUG \"Dashboard chart tooltip clipping on mobile screen\"",
-    "timestamp": "2026-10-06T07:05:49.734Z",
-    "createdAt": "2026-10-07T07:05:49.740Z",
-    "updatedAt": "2026-10-07T07:05:49.740Z"
+    "timestamp": "2026-10-06T13:34:58.781Z",
+    "createdAt": "2026-10-07T13:34:58.797Z",
+    "updatedAt": "2026-10-07T13:34:58.797Z"
   },
   {
     "id": "act_05",
@@ -50,9 +50,9 @@
     "userName": "Alex Rivera",
     "action": "BUG_STATUS_CHANGED",
     "details": "Marked bug \"Login validation error\" as FIXED",
-    "timestamp": "2026-10-06T19:05:49.734Z",
-    "createdAt": "2026-10-07T07:05:49.742Z",
-    "updatedAt": "2026-10-07T07:05:49.742Z"
+    "timestamp": "2026-10-07T01:34:58.781Z",
+    "createdAt": "2026-10-07T13:34:58.801Z",
+    "updatedAt": "2026-10-07T13:34:58.801Z"
   },
   {
     "id": "act_1791317663625_hjy4pk",
@@ -350,5 +350,158 @@
     "timestamp": "2026-10-07T07:05:52.665Z",
     "createdAt": "2026-10-07T07:05:52.665Z",
     "updatedAt": "2026-10-07T07:05:52.665Z"
+  },
+  {
+    "id": "act_1791380100600_yfrobz",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "PROJECT_CREATED",
+    "details": "Project \"Academic Cloud Run Suite\" was created by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:00.600Z",
+    "createdAt": "2026-10-07T13:35:00.600Z",
+    "updatedAt": "2026-10-07T13:35:00.600Z"
+  },
+  {
+    "id": "act_1791380100854_n4rjk9",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "SPRINT_CREATED",
+    "details": "Sprint \"Sprint Alpha\" created for project by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:00.854Z",
+    "createdAt": "2026-10-07T13:35:00.854Z",
+    "updatedAt": "2026-10-07T13:35:00.854Z"
+  },
+  {
+    "id": "act_1791380100914_sbn3n0",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "STORY_CREATED",
+    "details": "User story \"As an M.Tech student, I want to deploy to Cloud Run\" added to backlog",
+    "timestamp": "2026-10-07T13:35:00.914Z",
+    "createdAt": "2026-10-07T13:35:00.914Z",
+    "updatedAt": "2026-10-07T13:35:00.914Z"
+  },
+  {
+    "id": "act_1791380101000_6xkhno",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TASK_CREATED",
+    "details": "Task \"Configure Cloud Run Container\" created by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:01.000Z",
+    "createdAt": "2026-10-07T13:35:01.000Z",
+    "updatedAt": "2026-10-07T13:35:01.000Z"
+  },
+  {
+    "id": "act_1791380101039_fbhxxo",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to IN PROGRESS",
+    "timestamp": "2026-10-07T13:35:01.039Z",
+    "createdAt": "2026-10-07T13:35:01.039Z",
+    "updatedAt": "2026-10-07T13:35:01.039Z"
+  },
+  {
+    "id": "act_1791380101094_eb24eu",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to COMPLETED",
+    "timestamp": "2026-10-07T13:35:01.094Z",
+    "createdAt": "2026-10-07T13:35:01.094Z",
+    "updatedAt": "2026-10-07T13:35:01.094Z"
+  },
+  {
+    "id": "act_1791380101172_q3yiaw",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_REPORTED",
+    "details": "Priya Sharma reported bug \"Memory limit exceeded on high load\" (HIGH)",
+    "timestamp": "2026-10-07T13:35:01.172Z",
+    "createdAt": "2026-10-07T13:35:01.172Z",
+    "updatedAt": "2026-10-07T13:35:01.172Z"
+  },
+  {
+    "id": "act_1791380101246_tpszyy",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Alex Rivera transitioned \"Memory limit exceeded on high load\" to FIXED (Resolution: Configured Cloud Run min-instances to 0 and increased memory to 512MB)",
+    "timestamp": "2026-10-07T13:35:01.246Z",
+    "createdAt": "2026-10-07T13:35:01.246Z",
+    "updatedAt": "2026-10-07T13:35:01.246Z"
+  },
+  {
+    "id": "act_1791380101305_esca53",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Priya Sharma transitioned \"Memory limit exceeded on high load\" to CLOSED",
+    "timestamp": "2026-10-07T13:35:01.305Z",
+    "createdAt": "2026-10-07T13:35:01.305Z",
+    "updatedAt": "2026-10-07T13:35:01.305Z"
+  },
+  {
+    "id": "act_1791380102185_xwsqao",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TEAM_CREATED",
+    "details": "Team \"Security & Platform Pod\" was created by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:02.185Z",
+    "createdAt": "2026-10-07T13:35:02.185Z",
+    "updatedAt": "2026-10-07T13:35:02.185Z"
+  },
+  {
+    "id": "act_1791380102699_hq0u1o",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TEAM_MEMBER_ADDED",
+    "details": "Jordan Lee (DEVELOPER) was added to team \"Security & Platform Pod\" by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:02.699Z",
+    "createdAt": "2026-10-07T13:35:02.699Z",
+    "updatedAt": "2026-10-07T13:35:02.699Z"
+  },
+  {
+    "id": "act_1791380102902_gn0vxr",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TEAM_MEMBER_UPDATED",
+    "details": "Member Jordan Lee Senior in team \"Security & Platform Pod\" was updated by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:02.902Z",
+    "createdAt": "2026-10-07T13:35:02.902Z",
+    "updatedAt": "2026-10-07T13:35:02.902Z"
+  },
+  {
+    "id": "act_1791380103435_ee61wn",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TEAM_MEMBER_REMOVED",
+    "details": "A member was removed from team \"Security & Platform Pod\" by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:03.435Z",
+    "createdAt": "2026-10-07T13:35:03.435Z",
+    "updatedAt": "2026-10-07T13:35:03.435Z"
+  },
+  {
+    "id": "act_1791380103502_v4wj0m",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TEAM_DELETED",
+    "details": "Team \"Security & Platform Pod\" was deleted by Sarah Chen",
+    "timestamp": "2026-10-07T13:35:03.502Z",
+    "createdAt": "2026-10-07T13:35:03.502Z",
+    "updatedAt": "2026-10-07T13:35:03.502Z"
   }
 ]

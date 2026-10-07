@@ -4,30 +4,30 @@
     "name": "Sarah Chen",
     "email": "pm@devtrack.io",
     "role": "PROJECT_MANAGER",
-    "passwordHash": "$2b$10$Ny7mjlQoEe4lE9Mem.Omie4lrblt1x8gy9I/OQISegD6EjJabg9sm",
+    "passwordHash": "$2b$10$80EC5bkumnBqAgMQZOqHJO1A/oIqihF5syr.9PvfGW5G4P42lGKGi",
     "photoURL": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
-    "createdAt": "2026-09-07T07:05:49.684Z",
-    "updatedAt": "2026-10-07T07:05:49.698Z"
+    "createdAt": "2026-09-07T13:34:58.660Z",
+    "updatedAt": "2026-10-07T13:34:58.703Z"
   },
   {
     "id": "user_dev_01",
     "name": "Alex Rivera",
     "email": "dev@devtrack.io",
     "role": "DEVELOPER",
-    "passwordHash": "$2b$10$Ny7mjlQoEe4lE9Mem.Omie4lrblt1x8gy9I/OQISegD6EjJabg9sm",
+    "passwordHash": "$2b$10$80EC5bkumnBqAgMQZOqHJO1A/oIqihF5syr.9PvfGW5G4P42lGKGi",
     "photoURL": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-    "createdAt": "2026-09-07T07:05:49.698Z",
-    "updatedAt": "2026-10-07T07:05:49.701Z"
+    "createdAt": "2026-09-07T13:34:58.702Z",
+    "updatedAt": "2026-10-07T13:34:58.706Z"
   },
   {
     "id": "user_qa_01",
     "name": "Priya Sharma",
     "email": "tester@devtrack.io",
     "role": "TESTER",
-    "passwordHash": "$2b$10$Ny7mjlQoEe4lE9Mem.Omie4lrblt1x8gy9I/OQISegD6EjJabg9sm",
+    "passwordHash": "$2b$10$80EC5bkumnBqAgMQZOqHJO1A/oIqihF5syr.9PvfGW5G4P42lGKGi",
     "photoURL": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
-    "createdAt": "2026-09-07T07:05:49.698Z",
-    "updatedAt": "2026-10-07T07:05:49.701Z"
+    "createdAt": "2026-09-07T13:34:58.702Z",
+    "updatedAt": "2026-10-07T13:34:58.708Z"
   },
   {
     "id": "user_1791317663446_0y3cxw",
@@ -58,5 +58,25 @@
     "photoURL": "https://api.dicebear.com/7.x/avataaars/svg?seed=New%20Engineer",
     "createdAt": "2026-10-07T07:05:51.465Z",
     "updatedAt": "2026-10-07T07:05:51.465Z"
+  },
+  {
+    "id": "user_1791380100316_hl1r26",
+    "name": "New Engineer",
+    "email": "new_engineer_1791380100018@devtrack.io",
+    "role": "DEVELOPER",
+    "passwordHash": "$2b$10$j4ABhNMUYgxTpi/MqkxjLuDmmf6DrcZl9ZK/HEbYBrgm4YPCqmaLW",
+    "photoURL": "https://api.dicebear.com/7.x/avataaars/svg?seed=New%20Engineer",
+    "createdAt": "2026-10-07T13:35:00.316Z",
+    "updatedAt": "2026-10-07T13:35:00.316Z"
+  },
+  {
+    "id": "user_1791380102334_nwe59g",
+    "name": "Jordan Lee Senior",
+    "email": "jordan.senior@devtrack.io",
+    "role": "TESTER",
+    "passwordHash": "$2b$10$DmPy2q7ZQvZKvKiz1lZYGeOyqMcQyPsL.C6FGmlYlhR//Hd9BW8wi",
+    "photoURL": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan%20Lee",
+    "createdAt": "2026-10-07T13:35:02.689Z",
+    "updatedAt": "2026-10-07T13:35:02.897Z"
   }
 ]

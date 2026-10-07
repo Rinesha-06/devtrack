@@ -7,8 +7,8 @@
     "startDate": "2026-09-17",
     "endDate": "2026-10-01",
     "status": "Completed",
-    "createdAt": "2026-09-17T07:05:49.711Z",
-    "updatedAt": "2026-10-07T07:05:49.711Z"
+    "createdAt": "2026-09-17T13:34:58.735Z",
+    "updatedAt": "2026-10-07T13:34:58.735Z"
   },
   {
     "id": "sprint_02",
@@ -18,8 +18,8 @@
     "startDate": "2026-10-02",
     "endDate": "2026-10-16",
     "status": "Active",
-    "createdAt": "2026-10-02T07:05:49.711Z",
-    "updatedAt": "2026-10-07T07:05:49.714Z"
+    "createdAt": "2026-10-02T13:34:58.735Z",
+    "updatedAt": "2026-10-07T13:34:58.755Z"
   },
   {
     "id": "sprint_03",
@@ -29,8 +29,8 @@
     "startDate": "2026-10-17",
     "endDate": "2026-10-31",
     "status": "Planned",
-    "createdAt": "2026-10-07T07:05:49.711Z",
-    "updatedAt": "2026-10-07T07:05:49.715Z"
+    "createdAt": "2026-10-07T13:34:58.735Z",
+    "updatedAt": "2026-10-07T13:34:58.756Z"
   },
   {
     "id": "sprint_1791317663779_a2vw5y",
@@ -64,5 +64,16 @@
     "status": "Active",
     "createdAt": "2026-10-07T07:05:52.019Z",
     "updatedAt": "2026-10-07T07:05:52.019Z"
+  },
+  {
+    "id": "sprint_1791380100853_8q2mv5",
+    "projectId": "proj_1791380100599_5y2mm9",
+    "name": "Sprint Alpha",
+    "goal": "Demonstrate end-to-end Agile lifecycle",
+    "startDate": "2026-10-07",
+    "endDate": "2026-10-21",
+    "status": "Active",
+    "createdAt": "2026-10-07T13:35:00.853Z",
+    "updatedAt": "2026-10-07T13:35:00.853Z"
   }
 ]

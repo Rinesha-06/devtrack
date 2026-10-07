@@ -16,8 +16,8 @@
       "user_dev_01",
       "user_qa_01"
     ],
-    "createdAt": "2026-09-17T07:05:49.706Z",
-    "updatedAt": "2026-10-07T07:05:49.706Z"
+    "createdAt": "2026-09-17T13:34:58.713Z",
+    "updatedAt": "2026-10-07T13:34:58.713Z"
   },
   {
     "id": "proj_ecommerce_02",
@@ -35,8 +35,8 @@
       "user_pm_01",
       "user_dev_01"
     ],
-    "createdAt": "2026-09-27T07:05:49.706Z",
-    "updatedAt": "2026-10-07T07:05:49.710Z"
+    "createdAt": "2026-09-27T13:34:58.713Z",
+    "updatedAt": "2026-10-07T13:34:58.723Z"
   },
   {
     "id": "proj_1791317663624_n35f5y",
@@ -88,5 +88,23 @@
     ],
     "createdAt": "2026-10-07T07:05:51.728Z",
     "updatedAt": "2026-10-07T07:05:52.523Z"
+  },
+  {
+    "id": "proj_1791380100599_5y2mm9",
+    "name": "Academic Cloud Run Suite",
+    "description": "Testing RBAC enforcement on Cloud Run architecture",
+    "startDate": "2026-10-07",
+    "endDate": "2026-11-06",
+    "status": "Active",
+    "priority": "HIGH",
+    "managerId": "user_pm_01",
+    "repositoryUrl": "",
+    "progress": 100,
+    "members": [
+      "user_pm_01",
+      "user_1791380102334_nwe59g"
+    ],
+    "createdAt": "2026-10-07T13:35:00.599Z",
+    "updatedAt": "2026-10-07T13:35:03.500Z"
   }
 ]

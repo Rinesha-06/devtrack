@@ -5,12 +5,13 @@ import {
 } from 'lucide-react';
 import { api } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
-import { Task, TaskStatus, PriorityLevel, Project } from '../types';
+import { Task, TaskStatus, PriorityLevel, Project, User as UserType } from '../types';
 
 export const Tasks: React.FC = () => {
   const { user } = useAuth();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [users, setUsers] = useState<UserType[]>([]);
   const [selectedProject, setSelectedProject] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -19,6 +20,7 @@ export const Tasks: React.FC = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [projectId, setProjectId] = useState('');
+  const [assignedTo, setAssignedTo] = useState('');
   const [priority, setPriority] = useState<PriorityLevel>('MEDIUM');
   const [dueDate, setDueDate] = useState('');
   const [estimatedHours, setEstimatedHours] = useState(4);
@@ -39,12 +41,14 @@ export const Tasks: React.FC = () => {
   const loadData = async () => {
     setLoading(true);
     try {
-      const [tasksRes, projRes] = await Promise.all([
+      const [tasksRes, projRes, usersRes] = await Promise.all([
         api.tasks.list(selectedProject ? { projectId: selectedProject } : undefined),
-        api.projects.list()
+        api.projects.list(),
+        api.auth.getUsers()
       ]);
 
       if (tasksRes.data.success) setTasks(tasksRes.data.tasks);
+      if (usersRes.data.success) setUsers(usersRes.data.users);
       if (projRes.data.success) {
         setProjects(projRes.data.projects);
         if (!projectId && projRes.data.projects.length > 0) {
@@ -82,13 +86,14 @@ export const Tasks: React.FC = () => {
         priority,
         dueDate: dueDate || undefined,
         estimatedHours,
-        assignedTo: user?.id
+        assignedTo: assignedTo || user?.id
       });
 
       if (res.data.success) {
         setShowModal(false);
         setTitle('');
         setDescription('');
+        setAssignedTo('');
         loadData();
       }
     } catch (err: any) {
@@ -189,9 +194,12 @@ export const Tasks: React.FC = () => {
 
                         <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[10px] text-slate-400">
                           <span className="flex items-center gap-1">
-                            <Clock size={11} /> {t.dueDate}
+                            <Clock size={11} /> {t.dueDate || 'No due date'}
                           </span>
-                          <span className="font-medium text-slate-600">{t.estimatedHours}h est</span>
+                          <span className="flex items-center gap-1 text-slate-600 font-medium">
+                            <User size={11} className="text-teal-600" />
+                            {users.find(u => u.id === t.assignedTo)?.name || 'Assigned'}
+                          </span>
                         </div>
 
                         {/* Transition Action Buttons */}
@@ -286,6 +294,24 @@ export const Tasks: React.FC = () => {
                   placeholder="Technical specifications and acceptance criteria"
                   className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-teal-500 outline-none"
                 />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  Assign To (Team Member)
+                </label>
+                <select
+                  value={assignedTo}
+                  onChange={e => setAssignedTo(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:ring-2 focus:ring-teal-500 outline-none"
+                >
+                  <option value="">Assign to Me ({user?.name || 'Current User'})</option>
+                  {users.map(u => (
+                    <option key={u.id} value={u.id}>
+                      {u.name} ({u.email}) — [{u.role}]
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="grid grid-cols-3 gap-3">

@@ -3,25 +3,57 @@
     "id": "team_core_01",
     "name": "DevTrack Engineering Core",
     "description": "Cross-functional engineering pod responsible for Cloud Run microservices & frontend UI",
+    "projectId": "proj_devtrack_01",
     "createdBy": "user_pm_01",
     "members": [
       {
         "userId": "user_pm_01",
+        "name": "Sarah Chen",
+        "email": "pm@devtrack.io",
         "role": "PROJECT_MANAGER",
-        "addedAt": "2026-10-07T07:05:49.702Z"
+        "addedAt": "2026-10-07T13:34:58.709Z"
       },
       {
         "userId": "user_dev_01",
+        "name": "Alex Rivera",
+        "email": "dev@devtrack.io",
         "role": "DEVELOPER",
-        "addedAt": "2026-10-07T07:05:49.702Z"
+        "addedAt": "2026-10-07T13:34:58.709Z"
       },
       {
         "userId": "user_qa_01",
+        "name": "Priya Sharma",
+        "email": "tester@devtrack.io",
         "role": "TESTER",
-        "addedAt": "2026-10-07T07:05:49.702Z"
+        "addedAt": "2026-10-07T13:34:58.709Z"
       }
     ],
-    "createdAt": "2026-09-12T07:05:49.702Z",
-    "updatedAt": "2026-10-07T07:05:49.702Z"
+    "createdAt": "2026-09-12T13:34:58.709Z",
+    "updatedAt": "2026-10-07T13:34:58.709Z"
+  },
+  {
+    "id": "team_cloud_02",
+    "name": "Cloud Infrastructure & DevOps Pod",
+    "description": "Specialized pod for CI/CD pipelines, container deployments, and monitoring",
+    "projectId": "proj_ecommerce_02",
+    "createdBy": "user_pm_01",
+    "members": [
+      {
+        "userId": "user_pm_01",
+        "name": "Sarah Chen",
+        "email": "pm@devtrack.io",
+        "role": "PROJECT_MANAGER",
+        "addedAt": "2026-10-07T13:34:58.709Z"
+      },
+      {
+        "userId": "user_dev_01",
+        "name": "Alex Rivera",
+        "email": "dev@devtrack.io",
+        "role": "DEVELOPER",
+        "addedAt": "2026-10-07T13:34:58.709Z"
+      }
+    ],
+    "createdAt": "2026-09-22T13:34:58.709Z",
+    "updatedAt": "2026-10-07T13:34:58.712Z"
   }
 ]

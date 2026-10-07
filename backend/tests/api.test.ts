@@ -283,4 +283,141 @@ describe('DevTrack Complete API Test Suite', () => {
       expect(Array.isArray(res.body.builds)).toBe(true);
     });
   });
+
+  describe('7. Team & Team Member Management (PM Feature)', () => {
+    let testTeamId: string;
+    let addedMemberUserId: string;
+
+    it('POST /api/teams should allow PM to create a team assigned to a project', async () => {
+      const res = await request(app)
+        .post('/api/teams')
+        .set('Authorization', `Bearer ${pmToken}`)
+        .send({
+          name: 'Security & Platform Pod',
+          description: 'Responsible for IAM, TLS encryption, and secure APIs',
+          projectId: createdProjectId
+        });
+      expect(res.status).toBe(201);
+      expect(res.body.success).toBe(true);
+      expect(res.body.team.name).toBe('Security & Platform Pod');
+      expect(res.body.team.projectId).toBe(createdProjectId);
+      expect(Array.isArray(res.body.team.members)).toBe(true);
+      testTeamId = res.body.team.id;
+    });
+
+    it('POST /api/teams should reject non-PM user with 403 Forbidden', async () => {
+      const res = await request(app)
+        .post('/api/teams')
+        .set('Authorization', `Bearer ${devToken}`)
+        .send({
+          name: 'Unauthorized Pod'
+        });
+      expect(res.status).toBe(403);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toContain('Forbidden');
+    });
+
+    it('POST /api/teams/:id/members should allow PM to add a member with name, email, and role', async () => {
+      const res = await request(app)
+        .post(`/api/teams/${testTeamId}/members`)
+        .set('Authorization', `Bearer ${pmToken}`)
+        .send({
+          name: 'Jordan Lee',
+          email: 'jordan.lee@devtrack.io',
+          role: 'DEVELOPER'
+        });
+      expect(res.status).toBe(200);
+      expect(res.body.success).toBe(true);
+      expect(res.body.member.role).toBe('DEVELOPER');
+      expect(res.body.member.email).toBe('jordan.lee@devtrack.io');
+      addedMemberUserId = res.body.member.userId;
+      expect(addedMemberUserId).toBeDefined();
+
+      const found = res.body.team.members.find((m: any) => m.userId === addedMemberUserId);
+      expect(found).toBeDefined();
+      expect(found.role).toBe('DEVELOPER');
+    });
+
+    it('POST /api/teams/:id/members should reject non-PM user with 403 Forbidden', async () => {
+      const res = await request(app)
+        .post(`/api/teams/${testTeamId}/members`)
+        .set('Authorization', `Bearer ${testerToken}`)
+        .send({
+          name: 'Hacker User',
+          email: 'hacker@devtrack.io',
+          role: 'DEVELOPER'
+        });
+      expect(res.status).toBe(403);
+      expect(res.body.success).toBe(false);
+    });
+
+    it('PUT /api/teams/:id/members/:userId should allow PM to edit member details and change role', async () => {
+      const res = await request(app)
+        .put(`/api/teams/${testTeamId}/members/${addedMemberUserId}`)
+        .set('Authorization', `Bearer ${pmToken}`)
+        .send({
+          name: 'Jordan Lee Senior',
+          email: 'jordan.senior@devtrack.io',
+          role: 'TESTER'
+        });
+      expect(res.status).toBe(200);
+      expect(res.body.success).toBe(true);
+      expect(res.body.member.role).toBe('TESTER');
+      expect(res.body.member.name).toBe('Jordan Lee Senior');
+      expect(res.body.member.email).toBe('jordan.senior@devtrack.io');
+    });
+
+    it('PUT /api/teams/:id/members/:userId should reject non-PM with 403 Forbidden', async () => {
+      const res = await request(app)
+        .put(`/api/teams/${testTeamId}/members/${addedMemberUserId}`)
+        .set('Authorization', `Bearer ${devToken}`)
+        .send({
+          role: 'PROJECT_MANAGER'
+        });
+      expect(res.status).toBe(403);
+      expect(res.body.success).toBe(false);
+    });
+
+    it('GET /api/teams should list teams and persist member data correctly', async () => {
+      const res = await request(app)
+        .get('/api/teams')
+        .set('Authorization', `Bearer ${pmToken}`);
+      expect(res.status).toBe(200);
+      expect(res.body.success).toBe(true);
+      const team = res.body.teams.find((t: any) => t.id === testTeamId);
+      expect(team).toBeDefined();
+      expect(team.name).toBe('Security & Platform Pod');
+      const member = team.members.find((m: any) => m.userId === addedMemberUserId);
+      expect(member).toBeDefined();
+      expect(member.name).toBe('Jordan Lee Senior');
+      expect(member.role).toBe('TESTER');
+    });
+
+    it('DELETE /api/teams/:id/members/:userId should reject non-PM with 403 Forbidden', async () => {
+      const res = await request(app)
+        .delete(`/api/teams/${testTeamId}/members/${addedMemberUserId}`)
+        .set('Authorization', `Bearer ${testerToken}`);
+      expect(res.status).toBe(403);
+      expect(res.body.success).toBe(false);
+    });
+
+    it('DELETE /api/teams/:id/members/:userId should allow PM to remove member from team', async () => {
+      const res = await request(app)
+        .delete(`/api/teams/${testTeamId}/members/${addedMemberUserId}`)
+        .set('Authorization', `Bearer ${pmToken}`);
+      expect(res.status).toBe(200);
+      expect(res.body.success).toBe(true);
+      const memberStillExists = res.body.team.members.some((m: any) => m.userId === addedMemberUserId);
+      expect(memberStillExists).toBe(false);
+    });
+
+    it('DELETE /api/teams/:id should allow PM to delete a team', async () => {
+      const res = await request(app)
+        .delete(`/api/teams/${testTeamId}`)
+        .set('Authorization', `Bearer ${pmToken}`);
+      expect(res.status).toBe(200);
+      expect(res.body.success).toBe(true);
+      expect(res.body.message).toContain('deleted');
+    });
+  });
 });

@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   FolderKanban, Zap, CheckCircle2, AlertOctagon, Bug as BugIcon,
-  Clock, ArrowUpRight, CheckSquare, Activity as ActivityIcon, RefreshCw
+  Clock, ArrowUpRight, CheckSquare, Activity as ActivityIcon, RefreshCw,
+  Users, ChevronRight, Briefcase, ShieldCheck, Plus
 } from 'lucide-react';
 import {
   BarChart, Bar, PieChart, Pie, Cell, ResponsiveContainer,
   XAxis, YAxis, Tooltip, Legend
 } from 'recharts';
 import { api } from '../services/api';
-import { DashboardStats } from '../types';
+import { useAuth } from '../contexts/AuthContext';
+import { DashboardStats, Team } from '../types';
 
 export const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
+  const { isProjectManager } = useAuth();
   const [stats, setStats] = useState<DashboardStats | null>(null);
+  const [teams, setTeams] = useState<Team[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,9 +27,15 @@ export const Dashboard: React.FC = () => {
   const fetchStats = async () => {
     setLoading(true);
     try {
-      const res = await api.dashboard.getStats();
-      if (res.data.success) {
-        setStats(res.data.stats);
+      const [statsRes, teamsRes] = await Promise.all([
+        api.dashboard.getStats(),
+        api.teams.list()
+      ]);
+      if (statsRes.data.success) {
+        setStats(statsRes.data.stats);
+      }
+      if (teamsRes.data.success) {
+        setTeams(teamsRes.data.teams);
       }
     } catch (err) {
       console.error('Failed to fetch dashboard stats:', err);
@@ -239,6 +251,97 @@ export const Dashboard: React.FC = () => {
             )}
           </div>
         </div>
+      </div>
+
+      {/* Team & Engineering Pod Management Section */}
+      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 rounded-lg bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600">
+              <Users size={16} />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-800">Teams & Engineering Pods</h3>
+              <p className="text-[11px] text-slate-400">Cross-functional team assignments & role allocations</p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => navigate('/teams')}
+            className="inline-flex items-center gap-1 text-xs font-semibold text-teal-600 hover:text-teal-700 bg-teal-50/60 hover:bg-teal-50 px-3 py-1.5 rounded-lg border border-teal-100 transition self-start sm:self-auto"
+          >
+            <span>{isProjectManager ? 'Manage Teams & Members' : 'View Team Roster'}</span>
+            <ChevronRight size={14} />
+          </button>
+        </div>
+
+        {teams.length === 0 ? (
+          <div className="p-6 text-center bg-slate-50 rounded-lg border border-slate-100">
+            <p className="text-xs text-slate-500">No teams registered yet.</p>
+            {isProjectManager && (
+              <button
+                onClick={() => navigate('/teams')}
+                className="mt-2 inline-flex items-center gap-1 text-xs text-teal-600 font-semibold hover:underline"
+              >
+                <Plus size={13} /> Create First Team
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            {teams.slice(0, 6).map(team => {
+              const members = team.members || [];
+              const devCount = members.filter(m => m.role === 'DEVELOPER').length;
+              const testerCount = members.filter(m => m.role === 'TESTER').length;
+
+              return (
+                <div
+                  key={team.id}
+                  onClick={() => navigate('/teams')}
+                  className="p-3.5 bg-slate-50/70 hover:bg-slate-50 border border-slate-200/80 hover:border-teal-400/60 rounded-xl cursor-pointer transition shadow-2xs group"
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-900 group-hover:text-teal-700 transition">
+                        {team.name}
+                      </h4>
+                      {team.description && (
+                        <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">{team.description}</p>
+                      )}
+                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-white text-slate-600 border border-slate-200 shrink-0">
+                      {members.length} {members.length === 1 ? 'member' : 'members'}
+                    </span>
+                  </div>
+
+                  <div className="mt-3 flex items-center justify-between text-[11px] text-slate-500 border-t border-slate-200/60 pt-2.5">
+                    <div className="flex items-center gap-2">
+                      <span className="flex items-center gap-1 text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded font-medium text-[10px]">
+                        <Briefcase size={10} /> {devCount} Devs
+                      </span>
+                      <span className="flex items-center gap-1 text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded font-medium text-[10px]">
+                        <ShieldCheck size={10} /> {testerCount} QA
+                      </span>
+                    </div>
+
+                    {/* Mini avatar stack */}
+                    <div className="flex items-center -space-x-1">
+                      {members.slice(0, 3).map((m, idx) => (
+                        <div
+                          key={idx}
+                          title={m.name || 'Member'}
+                          className="h-5 w-5 rounded-full bg-slate-200 border border-white flex items-center justify-center text-[9px] font-bold text-slate-700"
+                        >
+                          {(m.name || 'U').charAt(0).toUpperCase()}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Recent Activity Log Stream */}
