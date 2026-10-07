@@ -4,33 +4,33 @@
     "projectId": "proj_devtrack_01",
     "name": "Sprint 1 — Core Auth & Architecture",
     "goal": "Establish Cloud Run base container, Firestore collections, and JWT Authentication.",
-    "startDate": "2026-09-16",
-    "endDate": "2026-09-30",
+    "startDate": "2026-09-17",
+    "endDate": "2026-10-01",
     "status": "Completed",
-    "createdAt": "2026-09-16T20:39:32.382Z",
-    "updatedAt": "2026-10-06T20:39:32.382Z"
+    "createdAt": "2026-09-17T07:05:49.711Z",
+    "updatedAt": "2026-10-07T07:05:49.711Z"
   },
   {
     "id": "sprint_02",
     "projectId": "proj_devtrack_01",
     "name": "Sprint 2 — Project & Backlog Management",
     "goal": "Deliver user story backlog, task status progression, and Kanban board.",
-    "startDate": "2026-10-01",
-    "endDate": "2026-10-15",
+    "startDate": "2026-10-02",
+    "endDate": "2026-10-16",
     "status": "Active",
-    "createdAt": "2026-10-01T20:39:32.382Z",
-    "updatedAt": "2026-10-06T20:39:32.387Z"
+    "createdAt": "2026-10-02T07:05:49.711Z",
+    "updatedAt": "2026-10-07T07:05:49.714Z"
   },
   {
     "id": "sprint_03",
     "projectId": "proj_devtrack_01",
     "name": "Sprint 3 — Bug Tracking & DevOps CI/CD",
     "goal": "Implement bug triage workflow, GitHub telemetry, and Cloud Build pipeline.",
-    "startDate": "2026-10-16",
-    "endDate": "2026-10-30",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-31",
     "status": "Planned",
-    "createdAt": "2026-10-06T20:39:32.382Z",
-    "updatedAt": "2026-10-06T20:39:32.388Z"
+    "createdAt": "2026-10-07T07:05:49.711Z",
+    "updatedAt": "2026-10-07T07:05:49.715Z"
   },
   {
     "id": "sprint_1791317663779_a2vw5y",
@@ -53,5 +53,16 @@
     "status": "Active",
     "createdAt": "2026-10-06T20:39:36.033Z",
     "updatedAt": "2026-10-06T20:39:36.033Z"
+  },
+  {
+    "id": "sprint_1791356752019_tgsyhn",
+    "projectId": "proj_1791356751728_cmdnna",
+    "name": "Sprint Alpha",
+    "goal": "Demonstrate end-to-end Agile lifecycle",
+    "startDate": "2026-10-07",
+    "endDate": "2026-10-21",
+    "status": "Active",
+    "createdAt": "2026-10-07T07:05:52.019Z",
+    "updatedAt": "2026-10-07T07:05:52.019Z"
   }
 ]

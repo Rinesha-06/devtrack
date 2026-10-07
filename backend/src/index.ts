@@ -71,12 +71,31 @@ app.use('/api/github', githubRoutes);
 app.use('/api/cicd', cicdRoutes);
 
 // Static frontend serving if built
-const frontendDistPath = path.resolve(__dirname, '../../frontend/dist');
-if (fs.existsSync(frontendDistPath)) {
+const candidatePaths = [
+  path.resolve(__dirname, '../../frontend/dist'),
+  path.resolve(__dirname, '../frontend/dist'),
+  path.resolve(__dirname, '../public'),
+  path.resolve(__dirname, 'public'),
+  path.resolve(process.cwd(), 'frontend/dist'),
+  path.resolve(process.cwd(), 'public'),
+  '/frontend/dist',
+  '/app/public',
+  '/app/frontend/dist'
+];
+
+const frontendDistPath = candidatePaths.find(p => fs.existsSync(path.join(p, 'index.html')));
+
+if (frontendDistPath) {
+  console.log(`[DevTrack] Serving static frontend from: ${frontendDistPath}`);
   app.use(express.static(frontendDistPath));
-  app.get('*', (req: Request, res: Response) => {
+  app.get('*', (req: Request, res: Response, next: NextFunction) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
     res.sendFile(path.join(frontendDistPath, 'index.html'));
   });
+} else {
+  console.warn('[DevTrack] Frontend static files not found in candidate paths:', candidatePaths);
 }
 
 // 404 handler for API routes

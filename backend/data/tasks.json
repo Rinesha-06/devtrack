@@ -10,11 +10,11 @@
     "createdBy": "user_pm_01",
     "priority": "CRITICAL",
     "status": "COMPLETED",
-    "dueDate": "2026-09-26",
+    "dueDate": "2026-09-27",
     "estimatedHours": 8,
     "actualHours": 7,
-    "createdAt": "2026-09-18T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.398Z"
+    "createdAt": "2026-09-19T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.720Z"
   },
   {
     "id": "task_02",
@@ -27,11 +27,11 @@
     "createdBy": "user_pm_01",
     "priority": "HIGH",
     "status": "COMPLETED",
-    "dueDate": "2026-09-28",
+    "dueDate": "2026-09-29",
     "estimatedHours": 6,
     "actualHours": 6,
-    "createdAt": "2026-09-20T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.401Z"
+    "createdAt": "2026-09-21T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.723Z"
   },
   {
     "id": "task_03",
@@ -44,11 +44,11 @@
     "createdBy": "user_pm_01",
     "priority": "HIGH",
     "status": "IN PROGRESS",
-    "dueDate": "2026-10-09",
+    "dueDate": "2026-10-10",
     "estimatedHours": 12,
     "actualHours": 6,
-    "createdAt": "2026-10-03T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.402Z"
+    "createdAt": "2026-10-04T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.724Z"
   },
   {
     "id": "task_04",
@@ -61,11 +61,11 @@
     "createdBy": "user_pm_01",
     "priority": "MEDIUM",
     "status": "REVIEW",
-    "dueDate": "2026-10-11",
+    "dueDate": "2026-10-12",
     "estimatedHours": 8,
     "actualHours": 7,
-    "createdAt": "2026-10-04T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.403Z"
+    "createdAt": "2026-10-05T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.725Z"
   },
   {
     "id": "task_05",
@@ -77,11 +77,11 @@
     "createdBy": "user_pm_01",
     "priority": "HIGH",
     "status": "TESTING",
-    "dueDate": "2026-10-10",
+    "dueDate": "2026-10-11",
     "estimatedHours": 10,
     "actualHours": 5,
-    "createdAt": "2026-10-05T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.405Z"
+    "createdAt": "2026-10-06T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.726Z"
   },
   {
     "id": "task_06",
@@ -92,11 +92,11 @@
     "createdBy": "user_pm_01",
     "priority": "MEDIUM",
     "status": "TO DO",
-    "dueDate": "2026-10-14",
+    "dueDate": "2026-10-15",
     "estimatedHours": 6,
     "actualHours": 0,
-    "createdAt": "2026-10-06T20:39:32.398Z",
-    "updatedAt": "2026-10-06T20:39:32.412Z"
+    "createdAt": "2026-10-07T07:05:49.720Z",
+    "updatedAt": "2026-10-07T07:05:49.727Z"
   },
   {
     "id": "task_1791317663895_f9nydl",
@@ -129,5 +129,21 @@
     "actualHours": 0,
     "createdAt": "2026-10-06T20:39:36.156Z",
     "updatedAt": "2026-10-06T20:39:36.261Z"
+  },
+  {
+    "id": "task_1791356752322_ctgl3d",
+    "projectId": "proj_1791356751728_cmdnna",
+    "sprintId": "sprint_1791356752019_tgsyhn",
+    "title": "Configure Cloud Run Container",
+    "description": "Deploy dockerized Node Express service",
+    "assignedTo": "user_dev_01",
+    "createdBy": "user_pm_01",
+    "priority": "CRITICAL",
+    "status": "COMPLETED",
+    "dueDate": "2026-10-14",
+    "estimatedHours": 4,
+    "actualHours": 0,
+    "createdAt": "2026-10-07T07:05:52.322Z",
+    "updatedAt": "2026-10-07T07:05:52.519Z"
   }
 ]

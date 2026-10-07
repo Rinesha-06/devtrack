@@ -6,8 +6,8 @@
     "message": "Sarah Chen assigned you \"Build Kanban Board Drag-and-Drop Columns\"",
     "read": false,
     "link": "/tasks",
-    "createdAt": "2026-10-03T20:39:32.432Z",
-    "updatedAt": "2026-10-06T20:39:32.432Z"
+    "createdAt": "2026-10-04T07:05:49.743Z",
+    "updatedAt": "2026-10-07T07:05:49.743Z"
   },
   {
     "id": "notif_02",
@@ -16,8 +16,8 @@
     "message": "Priya Sharma reported bug \"Dashboard chart tooltip clipping\"",
     "read": false,
     "link": "/bugs",
-    "createdAt": "2026-10-05T20:39:32.432Z",
-    "updatedAt": "2026-10-06T20:39:32.436Z"
+    "createdAt": "2026-10-06T07:05:49.743Z",
+    "updatedAt": "2026-10-07T07:05:49.747Z"
   },
   {
     "id": "notif_03",
@@ -26,8 +26,8 @@
     "message": "Alex Rivera marked bug \"Login validation error\" as FIXED",
     "read": true,
     "link": "/bugs",
-    "createdAt": "2026-10-06T10:39:32.432Z",
-    "updatedAt": "2026-10-06T20:39:32.437Z"
+    "createdAt": "2026-10-06T21:05:49.743Z",
+    "updatedAt": "2026-10-07T07:05:49.747Z"
   },
   {
     "id": "notif_1791317663897_qjvy18",
@@ -48,5 +48,15 @@
     "link": "/tasks",
     "createdAt": "2026-10-06T20:39:36.164Z",
     "updatedAt": "2026-10-06T20:39:36.164Z"
+  },
+  {
+    "id": "notif_1791356752328_g7lfz6",
+    "userId": "user_dev_01",
+    "title": "New Task Assigned",
+    "message": "You were assigned task \"Configure Cloud Run Container\"",
+    "read": false,
+    "link": "/tasks",
+    "createdAt": "2026-10-07T07:05:52.328Z",
+    "updatedAt": "2026-10-07T07:05:52.328Z"
   }
 ]

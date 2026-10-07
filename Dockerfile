@@ -37,9 +37,11 @@ RUN npm ci --only=production && npm cache clean --force
 # Copy compiled backend
 COPY --from=backend-builder /app/backend/dist ./dist
 
-# Copy compiled frontend into dist/public and ../frontend/dist for static serving
+# Copy compiled frontend into multiple candidate locations for static serving
+COPY --from=frontend-builder /app/frontend/dist /frontend/dist
 COPY --from=frontend-builder /app/frontend/dist /app/frontend/dist
 COPY --from=frontend-builder /app/frontend/dist ./public
+COPY --from=frontend-builder /app/frontend/dist ./dist/public
 
 # Expose Cloud Run port
 EXPOSE 8080

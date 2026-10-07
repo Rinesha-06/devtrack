@@ -6,9 +6,9 @@
     "userName": "Sarah Chen",
     "action": "PROJECT_CREATED",
     "details": "Created project \"DevTrack Platform\"",
-    "timestamp": "2026-09-16T20:39:32.421Z",
-    "createdAt": "2026-10-06T20:39:32.421Z",
-    "updatedAt": "2026-10-06T20:39:32.421Z"
+    "timestamp": "2026-09-17T07:05:49.734Z",
+    "createdAt": "2026-10-07T07:05:49.734Z",
+    "updatedAt": "2026-10-07T07:05:49.734Z"
   },
   {
     "id": "act_02",
@@ -17,9 +17,9 @@
     "userName": "Sarah Chen",
     "action": "SPRINT_CREATED",
     "details": "Created Sprint 2 — Project & Backlog Management",
-    "timestamp": "2026-10-01T20:39:32.421Z",
-    "createdAt": "2026-10-06T20:39:32.428Z",
-    "updatedAt": "2026-10-06T20:39:32.428Z"
+    "timestamp": "2026-10-02T07:05:49.734Z",
+    "createdAt": "2026-10-07T07:05:49.737Z",
+    "updatedAt": "2026-10-07T07:05:49.737Z"
   },
   {
     "id": "act_03",
@@ -28,9 +28,9 @@
     "userName": "Alex Rivera",
     "action": "TASK_STATUS_CHANGED",
     "details": "Moved \"Build Kanban Board Drag-and-Drop Columns\" to IN PROGRESS",
-    "timestamp": "2026-10-04T20:39:32.421Z",
-    "createdAt": "2026-10-06T20:39:32.429Z",
-    "updatedAt": "2026-10-06T20:39:32.429Z"
+    "timestamp": "2026-10-05T07:05:49.734Z",
+    "createdAt": "2026-10-07T07:05:49.739Z",
+    "updatedAt": "2026-10-07T07:05:49.739Z"
   },
   {
     "id": "act_04",
@@ -39,9 +39,9 @@
     "userName": "Priya Sharma",
     "action": "BUG_REPORTED",
     "details": "Reported BUG \"Dashboard chart tooltip clipping on mobile screen\"",
-    "timestamp": "2026-10-05T20:39:32.421Z",
-    "createdAt": "2026-10-06T20:39:32.430Z",
-    "updatedAt": "2026-10-06T20:39:32.430Z"
+    "timestamp": "2026-10-06T07:05:49.734Z",
+    "createdAt": "2026-10-07T07:05:49.740Z",
+    "updatedAt": "2026-10-07T07:05:49.740Z"
   },
   {
     "id": "act_05",
@@ -50,9 +50,9 @@
     "userName": "Alex Rivera",
     "action": "BUG_STATUS_CHANGED",
     "details": "Marked bug \"Login validation error\" as FIXED",
-    "timestamp": "2026-10-06T08:39:32.421Z",
-    "createdAt": "2026-10-06T20:39:32.431Z",
-    "updatedAt": "2026-10-06T20:39:32.431Z"
+    "timestamp": "2026-10-06T19:05:49.734Z",
+    "createdAt": "2026-10-07T07:05:49.742Z",
+    "updatedAt": "2026-10-07T07:05:49.742Z"
   },
   {
     "id": "act_1791317663625_hjy4pk",
@@ -251,5 +251,104 @@
     "timestamp": "2026-10-06T20:39:36.471Z",
     "createdAt": "2026-10-06T20:39:36.471Z",
     "updatedAt": "2026-10-06T20:39:36.471Z"
+  },
+  {
+    "id": "act_1791356751729_vs0t71",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "PROJECT_CREATED",
+    "details": "Project \"Academic Cloud Run Suite\" was created by Sarah Chen",
+    "timestamp": "2026-10-07T07:05:51.729Z",
+    "createdAt": "2026-10-07T07:05:51.729Z",
+    "updatedAt": "2026-10-07T07:05:51.729Z"
+  },
+  {
+    "id": "act_1791356752021_s7cvdd",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "SPRINT_CREATED",
+    "details": "Sprint \"Sprint Alpha\" created for project by Sarah Chen",
+    "timestamp": "2026-10-07T07:05:52.021Z",
+    "createdAt": "2026-10-07T07:05:52.021Z",
+    "updatedAt": "2026-10-07T07:05:52.021Z"
+  },
+  {
+    "id": "act_1791356752122_naqwvf",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "STORY_CREATED",
+    "details": "User story \"As an M.Tech student, I want to deploy to Cloud Run\" added to backlog",
+    "timestamp": "2026-10-07T07:05:52.122Z",
+    "createdAt": "2026-10-07T07:05:52.122Z",
+    "updatedAt": "2026-10-07T07:05:52.122Z"
+  },
+  {
+    "id": "act_1791356752324_ouw8jz",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_pm_01",
+    "userName": "Sarah Chen",
+    "action": "TASK_CREATED",
+    "details": "Task \"Configure Cloud Run Container\" created by Sarah Chen",
+    "timestamp": "2026-10-07T07:05:52.324Z",
+    "createdAt": "2026-10-07T07:05:52.324Z",
+    "updatedAt": "2026-10-07T07:05:52.324Z"
+  },
+  {
+    "id": "act_1791356752416_6pu2hc",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to IN PROGRESS",
+    "timestamp": "2026-10-07T07:05:52.416Z",
+    "createdAt": "2026-10-07T07:05:52.416Z",
+    "updatedAt": "2026-10-07T07:05:52.416Z"
+  },
+  {
+    "id": "act_1791356752521_skrt3r",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "TASK_STATUS_CHANGED",
+    "details": "Alex Rivera moved \"Configure Cloud Run Container\" to COMPLETED",
+    "timestamp": "2026-10-07T07:05:52.521Z",
+    "createdAt": "2026-10-07T07:05:52.521Z",
+    "updatedAt": "2026-10-07T07:05:52.521Z"
+  },
+  {
+    "id": "act_1791356752565_12pmf1",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_REPORTED",
+    "details": "Priya Sharma reported bug \"Memory limit exceeded on high load\" (HIGH)",
+    "timestamp": "2026-10-07T07:05:52.565Z",
+    "createdAt": "2026-10-07T07:05:52.565Z",
+    "updatedAt": "2026-10-07T07:05:52.565Z"
+  },
+  {
+    "id": "act_1791356752607_wgonwk",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_dev_01",
+    "userName": "Alex Rivera",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Alex Rivera transitioned \"Memory limit exceeded on high load\" to FIXED (Resolution: Configured Cloud Run min-instances to 0 and increased memory to 512MB)",
+    "timestamp": "2026-10-07T07:05:52.610Z",
+    "createdAt": "2026-10-07T07:05:52.610Z",
+    "updatedAt": "2026-10-07T07:05:52.610Z"
+  },
+  {
+    "id": "act_1791356752664_wvz89f",
+    "projectId": "proj_1791356751728_cmdnna",
+    "userId": "user_qa_01",
+    "userName": "Priya Sharma",
+    "action": "BUG_STATUS_CHANGED",
+    "details": "Priya Sharma transitioned \"Memory limit exceeded on high load\" to CLOSED",
+    "timestamp": "2026-10-07T07:05:52.665Z",
+    "createdAt": "2026-10-07T07:05:52.665Z",
+    "updatedAt": "2026-10-07T07:05:52.665Z"
   }
 ]
