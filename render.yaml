@@ -1,0 +1,20 @@
+# ============================================================
+# DevTrack Render Infrastructure as Code (render.yaml Blueprint)
+# Free Tier Cloud Deployment Specification
+# ============================================================
+services:
+  - type: web
+    name: devtrack-app
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: USE_LOCAL_DB
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
