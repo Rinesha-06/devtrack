@@ -4,30 +4,30 @@
     "name": "Sarah Chen",
     "email": "pm@devtrack.io",
     "role": "PROJECT_MANAGER",
-    "passwordHash": "$2b$10$G2DxuLXn5JacjCRj5..6BuDxxFCNV2FuHFGRUn2VPqNw8VDx8ZLpS",
+    "passwordHash": "$2b$10$CpsZSNQTjs.O6nORJ8WJ4ug2Gwt6BoC.kpmMtBUtwa6hCsVhVDGn.",
     "photoURL": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
-    "createdAt": "2026-09-06T20:14:21.756Z",
-    "updatedAt": "2026-10-06T20:14:21.760Z"
+    "createdAt": "2026-09-06T20:39:32.068Z",
+    "updatedAt": "2026-10-06T20:39:32.366Z"
   },
   {
     "id": "user_dev_01",
     "name": "Alex Rivera",
     "email": "dev@devtrack.io",
     "role": "DEVELOPER",
-    "passwordHash": "$2b$10$G2DxuLXn5JacjCRj5..6BuDxxFCNV2FuHFGRUn2VPqNw8VDx8ZLpS",
+    "passwordHash": "$2b$10$CpsZSNQTjs.O6nORJ8WJ4ug2Gwt6BoC.kpmMtBUtwa6hCsVhVDGn.",
     "photoURL": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-    "createdAt": "2026-09-06T20:14:21.760Z",
-    "updatedAt": "2026-10-06T20:14:21.761Z"
+    "createdAt": "2026-09-06T20:39:32.366Z",
+    "updatedAt": "2026-10-06T20:39:32.368Z"
   },
   {
     "id": "user_qa_01",
     "name": "Priya Sharma",
     "email": "tester@devtrack.io",
     "role": "TESTER",
-    "passwordHash": "$2b$10$G2DxuLXn5JacjCRj5..6BuDxxFCNV2FuHFGRUn2VPqNw8VDx8ZLpS",
+    "passwordHash": "$2b$10$CpsZSNQTjs.O6nORJ8WJ4ug2Gwt6BoC.kpmMtBUtwa6hCsVhVDGn.",
     "photoURL": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
-    "createdAt": "2026-09-06T20:14:21.760Z",
-    "updatedAt": "2026-10-06T20:14:21.762Z"
+    "createdAt": "2026-09-06T20:39:32.366Z",
+    "updatedAt": "2026-10-06T20:39:32.369Z"
   },
   {
     "id": "user_1791317663446_0y3cxw",
@@ -38,5 +38,15 @@
     "photoURL": "https://api.dicebear.com/7.x/avataaars/svg?seed=New%20Engineer",
     "createdAt": "2026-10-06T20:14:23.446Z",
     "updatedAt": "2026-10-06T20:14:23.446Z"
+  },
+  {
+    "id": "user_1791319174801_oj281m",
+    "name": "New Engineer",
+    "email": "new_engineer_1791319174429@devtrack.io",
+    "role": "DEVELOPER",
+    "passwordHash": "$2b$10$IH66YIsIzNXymQ2q7Q7Xn.kw1QkAW0Jrgmy.e5D1n.PaCczfZBDFe",
+    "photoURL": "https://api.dicebear.com/7.x/avataaars/svg?seed=New%20Engineer",
+    "createdAt": "2026-10-06T20:39:34.803Z",
+    "updatedAt": "2026-10-06T20:39:34.803Z"
   }
 ]

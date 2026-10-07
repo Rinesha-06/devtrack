@@ -73,7 +73,7 @@ export async function seedDemoData() {
       priority: 'HIGH',
       managerId: 'user_pm_01',
       teamId: 'team_core_01',
-      repositoryUrl: 'https://github.com/google/devtrack-demo',
+      repositoryUrl: 'https://github.com/Rinesha-06/devtrack',
       progress: 68,
       members: ['user_pm_01', 'user_dev_01', 'user_qa_01'],
       createdAt: new Date(Date.now() - 20 * 86400000).toISOString(),

@@ -7,7 +7,7 @@ import { api } from '../services/api';
 import { RepositoryDetails } from '../types';
 
 export const GitHubView: React.FC = () => {
-  const [repoUrl, setRepoUrl] = useState('https://github.com/google/devtrack-demo');
+  const [repoUrl, setRepoUrl] = useState('https://github.com/Rinesha-06/devtrack');
   const [repo, setRepo] = useState<RepositoryDetails | null>(null);
   const [loading, setLoading] = useState(true);
 

@@ -13,8 +13,8 @@
     "dueDate": "2026-09-26",
     "estimatedHours": 8,
     "actualHours": 7,
-    "createdAt": "2026-09-18T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.786Z"
+    "createdAt": "2026-09-18T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.398Z"
   },
   {
     "id": "task_02",
@@ -30,8 +30,8 @@
     "dueDate": "2026-09-28",
     "estimatedHours": 6,
     "actualHours": 6,
-    "createdAt": "2026-09-20T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.789Z"
+    "createdAt": "2026-09-20T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.401Z"
   },
   {
     "id": "task_03",
@@ -47,8 +47,8 @@
     "dueDate": "2026-10-09",
     "estimatedHours": 12,
     "actualHours": 6,
-    "createdAt": "2026-10-03T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.790Z"
+    "createdAt": "2026-10-03T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.402Z"
   },
   {
     "id": "task_04",
@@ -64,8 +64,8 @@
     "dueDate": "2026-10-11",
     "estimatedHours": 8,
     "actualHours": 7,
-    "createdAt": "2026-10-04T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.791Z"
+    "createdAt": "2026-10-04T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.403Z"
   },
   {
     "id": "task_05",
@@ -80,8 +80,8 @@
     "dueDate": "2026-10-10",
     "estimatedHours": 10,
     "actualHours": 5,
-    "createdAt": "2026-10-05T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.792Z"
+    "createdAt": "2026-10-05T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.405Z"
   },
   {
     "id": "task_06",
@@ -95,8 +95,8 @@
     "dueDate": "2026-10-14",
     "estimatedHours": 6,
     "actualHours": 0,
-    "createdAt": "2026-10-06T20:14:21.786Z",
-    "updatedAt": "2026-10-06T20:14:21.793Z"
+    "createdAt": "2026-10-06T20:39:32.398Z",
+    "updatedAt": "2026-10-06T20:39:32.412Z"
   },
   {
     "id": "task_1791317663895_f9nydl",
@@ -113,5 +113,21 @@
     "actualHours": 0,
     "createdAt": "2026-10-06T20:14:23.895Z",
     "updatedAt": "2026-10-06T20:14:23.974Z"
+  },
+  {
+    "id": "task_1791319176156_cveeai",
+    "projectId": "proj_1791319175784_gjpkix",
+    "sprintId": "sprint_1791319176033_dy4av9",
+    "title": "Configure Cloud Run Container",
+    "description": "Deploy dockerized Node Express service",
+    "assignedTo": "user_dev_01",
+    "createdBy": "user_pm_01",
+    "priority": "CRITICAL",
+    "status": "COMPLETED",
+    "dueDate": "2026-10-13",
+    "estimatedHours": 4,
+    "actualHours": 0,
+    "createdAt": "2026-10-06T20:39:36.156Z",
+    "updatedAt": "2026-10-06T20:39:36.261Z"
   }
 ]

@@ -6,7 +6,7 @@ import { RepositoryDetails, CommitInfo } from '../models/types';
 export class GitHubController {
   static async getRepository(req: AuthenticatedRequest, res: Response) {
     try {
-      const repoUrl = (req.query.url as string) || 'https://github.com/google/devtrack-demo';
+      const repoUrl = (req.query.url as string) || 'https://github.com/Rinesha-06/devtrack';
       const cleanUrl = repoUrl.replace(/\.git$/, '');
       const parts = cleanUrl.split('/').filter(Boolean);
       const owner = parts[parts.length - 2] || 'devtrack-team';
@@ -100,7 +100,7 @@ export class GitHubController {
 
   static async getCommits(req: AuthenticatedRequest, res: Response) {
     try {
-      const repoUrl = (req.query.url as string) || 'https://github.com/google/devtrack-demo';
+      const repoUrl = (req.query.url as string) || 'https://github.com/Rinesha-06/devtrack';
       const cleanUrl = repoUrl.replace(/\.git$/, '');
       const parts = cleanUrl.split('/').filter(Boolean);
       const owner = parts[parts.length - 2] || 'devtrack-team';
